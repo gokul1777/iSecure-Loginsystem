@@ -45,6 +45,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <body>
     <?php require 'partials/_nav.php'   ?>
     <?php
+
     if($showAlert){
       echo'<div class="alert alert-success alert-dismissible fade show" role="alert">
       <strong>Success!</strong> Your account is now created and you can login.
