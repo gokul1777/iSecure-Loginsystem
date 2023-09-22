@@ -81,12 +81,12 @@ else{
         <form action="/loginsystem/signup.php" method="post">
   <div class="form-group ">
     <label for="username">Username</label>
-    <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+    <input type="text" maxlength="11" class="form-control" id="username" name="username" aria-describedby="emailHelp">
     
   </div>
   <div class="form-group ">
     <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+    <input type="password" maxlength="23" class="form-control" id="password" name="password" placeholder="Password">
   </div>
   <div class="form-group ">
     <label for="cpassword">Confirm Password</label>
