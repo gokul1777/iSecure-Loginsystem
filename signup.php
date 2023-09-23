@@ -16,10 +16,11 @@ if($numExistRows > 0){
   $showError = "Username already Exists";
 }
 else{
-  $exist = false;
+  // $exist = false;
 
   if (($password == $cpassword)) {
-     $sql = "INSERT INTO `users` (`username`, `password`, `dt`) VALUES ('$username', '$password', current_timestamp())";
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+     $sql = "INSERT INTO `users` (`username`, `password`, `dt`) VALUES ('$username', '$hash', current_timestamp())";
      $result = mysqli_query($conn, $sql);
      if($result){
       $showAlert = true;
